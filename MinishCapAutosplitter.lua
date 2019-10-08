@@ -1,5 +1,5 @@
 -- Minish Cap autosplitter for LiveSplit
--- Semirare, 2019 https://github.com/semirare
+-- Semirare, 2019 https://github.com/icemirrors18/Minish-Cap-Autosplitter
 -- Requires LiveSplit 1.7+ See readme for setup information
 
 current_split = 1
