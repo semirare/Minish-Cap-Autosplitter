@@ -118,10 +118,12 @@ end
 
 --gets the player's current location to the location of each boss room
 local function check_area_entry(goalName)
-	if (goalName ~= "WINDRUINS") then
-		compare_locations(goalName)
+	if (goalName == "WINDRUINS") then
+		--check for castor minish cave HP then location
+	elseif (goalName == "LEAVECLOUDTOPS") then
+		--check for light arrows then location
 	else
-		---lol
+		compare_locations(goalName)
 	end
 end
 
