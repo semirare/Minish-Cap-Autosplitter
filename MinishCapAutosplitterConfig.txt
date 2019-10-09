@@ -21,7 +21,7 @@ FLAG,GUSTJAR,2B36,6
 FLAG,EARTHELEMENT,2B42,8
 ------------------------------
 --Crenel Plant
---FLAG,CRENELPLANT,2CC5,8
+--FLAG,CRENELPLANT,2CC5,4
 --splits on the vine having crenel water dumped on it
 ------------------------------
 --Grip Ring
