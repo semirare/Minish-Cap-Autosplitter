@@ -105,7 +105,7 @@ local function check_boss_entry(bossName)
 	elseif (bossName == "GYORG") then
 		compare_locations(current_location[1], current_location[2], 113, 0)
 	elseif (bossName == "DHCBOSSHALL") then
-		compare_locations(current_location[1], current_location[2], 136, 23)
+		compare_locations(current_location[1], current_location[2], 141, 0)
 	elseif (bossName == "DARKNUTS") then
 		--darknuts to V1
 		compare_locations(current_location[1], current_location[2], 137, 0)
