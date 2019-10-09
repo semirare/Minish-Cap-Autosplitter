@@ -184,7 +184,21 @@ end
 
 --set up for customized splits
 local function establish_splits()
-	local file = io.open("MinishCapAutosplitterConfig.txt", 'r')
+	io.write("What category are you running? (A = Any%, F = Firerod, G = Glitchless, H = Hundo):")
+	local answer = io.read()
+	if (answer == "A") then
+		answer = "ANY"
+	elseif (answer == "F") then
+		answer = "FIREROD"
+	elseif (answer = "G") then
+		answer = "GLITCHLESS"
+	elseif (answer = "H") then
+		answer = "HUNDO"
+	else
+		io.write("Invalid category, please enter on of the following(letter only): (A = Any%, F = Firerod, G = Glitchless, H = Hundo)"
+		establish_splits()
+	end
+	local file = io.open("MinishCapAutosplitterConfig" .. answer .. ".txt", 'r')
 	local splitNum = 1
 	local splitInfo = {}
 	for line in file:lines() do
