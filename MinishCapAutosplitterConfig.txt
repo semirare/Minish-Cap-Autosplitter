@@ -34,7 +34,7 @@
 --FLAG,CANE,2B36,4
 ------------------------------
 --Enter Gleerock
---ENTERBOSS,GLEEROK
+--ENTERAREA,GLEEROK
 --split on entering gleerock's room
 ------------------------------
 --Fire Element
@@ -53,7 +53,7 @@
 --FLAG,MOLEMITTS,2B36,2
 ------------------------------
 --Enter Mazaal
---ENTERBOSS,MAZAAL
+--ENTERAREA,MAZAAL
 --split on entering mazaal's room
 ------------------------------
 --Ocarina
@@ -79,7 +79,7 @@
 --FLAG,LANTERN,2B35,2
 ------------------------------
 --Enter Octo
---ENTERBOSS,OCTO
+--ENTERAREA,OCTO
 ------------------------------
 --Water Element
 --FLAG,WATERELEMENT,2B42,4
@@ -88,7 +88,7 @@
 --FLAG,ROYALVALLEY,2D02,6
 ------------------------------
 --Cloud Tops - lol glitchless
---ENTERBOSS,HOUSEOFWINDS
+--ENTERAREA,HOUSEOFWINDS
 --splits upon entering the screen with house of the winds after taking the big tornado
 ------------------------------
 --Enter PoW
@@ -98,7 +98,7 @@
 --FLAG,CAPE,2B37,8
 ------------------------------
 --Enter Gyorg
---ENTERBOSS,GYORG
+--ENTERAREA,GYORG
 --split on entering gyorg room
 ------------------------------
 --Wind Element
@@ -111,17 +111,17 @@
 --FLAG,ROYALVALLEY,2D02,6
 ------------------------------
 --Hyrule Garden - Lol Hundo
---ENTERBOSS,WARPCRENEL
+--ENTERAREA,WARPCRENEL
 ------------------------------
 --Enter Wind Ruins - Lol Hundo
---ENTERBOSS,WINDRUINS
+--ENTERAREA,WINDRUINS
 --Splits after getting HP from Castor bottom right minish cave then entering wind ruins
 ------------------------------
 --Warp Crenel - Lol Hundo
---ENTERBOSS,WARPCRENEL
+--ENTERAREA,WARPCRENEL
 ------------------------------
 --Warp Hylia - Lol Hundo
---ENTERBOSS,WARPHYLIA
+--ENTERAREA,WARPHYLIA
 ------------------------------
 --4 Bottles - Lol Hundo
 --FLAG,BOTTLES,2B39,2
@@ -138,14 +138,14 @@
 --FLAG,DHCKEY,2DBC,5
 ------------------------------
 --Enter DHC Boss Hall(Ball & Chain, Keatons, Nuts) - Firerod
---ENTERBOSS,DHCBOSSHALL
+--ENTERAREA,DHCBOSSHALL
 ------------------------------
 --Darknuts
---ENTERBOSS,DARKNUTS
+--ENTERAREA,DARKNUTS
 --Splits upon entering staircase after darknuts
 ------------------------------
 --V1
---ENTERBOSS,V1
+--ENTERAREA,V1
 --splits on teleport to V2 room
 ------------------------------
 --V2
@@ -157,7 +157,7 @@ VAATI,V3
 --splits on last hit
 ------------------------------
 --Enter Cloud Tops - Lol Hundo
---ENTERBOSS,CLOUDTOPS
+--ENTERAREA,CLOUDTOPS
 ------------------------------
 --Tingle Trophy - Lol Hundo
 --FLAG,TINGLE,2B41,6
