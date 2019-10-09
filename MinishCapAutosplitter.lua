@@ -34,7 +34,29 @@ local address_table =
 ["WINDELEMENT"] = 0x002B42,
 ["ENTERDHC"] = 0x002AA3,
 ["SPAWNNUTS"] = 0x002DC4,
-["DHCKEY"] = 0x002DBC
+["DHCKEY"] = 0x002DBC,
+["SIMON"] = 0x002B43,
+["CUCCOS"] = 0x002CA5,
+["BOTTLES"] = 0x002B29,
+["TINGLE"] = 0x002B41,
+["FIGURINES"] = 0x002B41,
+["MIRROR"] = 0x002B35
+}
+
+local location_table =
+{
+["GLEEROK"] = {81, 0},
+["MAZAAL"] = {88, 22},
+["OCTO"] = {96,14},
+["HOUSEOFWINDS"] = {8,0},
+["GYORG"] = {113,0},
+["DHCBOSSHALL"] = {141,0},
+["DARKNUTS"] = {137,0},
+["V1"] = {140,0},
+["WARPCRENEL"] = {6,2},
+["WARPHYLIA"] = {11,0},
+["WINDRUINS"] = {5,0},
+["CLOUDTOPS"] = {8,1},
 }
 
 --used to store splits based on how the user has set them up - populated in the establish_splits function
@@ -64,12 +86,17 @@ end
 --gets the current area and room of the player
 local function get_player_location()
 	--returns the room and area as DECIMAL, not hex
-	return {memory.readbyte(0x0BF4), memory.readbyte(0x0BF5)}
+	memory.usememorydomain("IWRAM")
+	local location = {memory.readbyte(0x0BF4), memory.readbyte(0x0BF5)}
+	memory.usememorydomain("EWRAM")
+	return location
 end
 
 --checks if the player's location matches the goal location and splits if it does
-local function compare_locations(currentArea, currentRoom, goalArea, goalRoom)
-	if (currentArea == goalArea and currentRoom == goalRoom) then
+local function compare_locations(goal)
+	local player_loc = get_player_location()
+	local goal_loc = location_table[goal]
+	if (player_loc[1] == goal_loc[1] and player_loc[2] == goal_loc[2]) then
 		tcp_connection:send("split\r\n")
 		current_split = current_split + 1	
 	end
@@ -90,28 +117,11 @@ local function check_flag(address,bit)
 end
 
 --gets the player's current location to the location of each boss room
-local function check_boss_entry(bossName)
-	memory.usememorydomain("IWRAM")
-	local current_location = get_player_location()
-	memory.usememorydomain("EWRAM")
-	if (bossName == "GLEEROK") then
-		compare_locations(current_location[1], current_location[2], 81, 0)
-	elseif (bossName == "MAZAAL") then
-		compare_locations(current_location[1], current_location[2], 88, 22)
-	elseif (bossName == "OCTO") then
-		compare_locations(current_location[1], current_location[2], 96, 14)
-	elseif (bossName == "CLOUDTOPS") then
-		compare_locations(current_location[1], current_location[2], 8, 0)
-	elseif (bossName == "GYORG") then
-		compare_locations(current_location[1], current_location[2], 113, 0)
-	elseif (bossName == "DHCBOSSHALL") then
-		compare_locations(current_location[1], current_location[2], 141, 0)
-	elseif (bossName == "DARKNUTS") then
-		--darknuts to V1
-		compare_locations(current_location[1], current_location[2], 137, 0)
+local function check_area_entry(goalName)
+	if (goalName ~= "WINDRUINS") then
+		compare_locations(goalName)
 	else
-		--V1 to V2
-		compare_locations(current_location[1], current_location[2], 140, 0)
+		---lol
 	end
 end
 
@@ -139,7 +149,7 @@ end
 local function check_start()
 	memory.usememorydomain("IWRAM")
 	if(memory.readbyte(0x1002) == 2) then
-		--if we weren't started and game state becomes $02, game has been started
+		--if we weren't started and game state becomes 2, game has been started
 		started = true
 		memory.usememorydomain("EWRAM")
 		return true
@@ -150,8 +160,8 @@ local function check_current_split()
 	local split = splits_table[current_split]
 	if (split[1] == "FLAG") then
 		check_flag(address_table[split[2]], tonumber(split[4]))
-	elseif (split[1] == "ENTERBOSS") then
-		check_boss_entry(split[2])
+	elseif (split[1] == "ENTERAREA") then
+		check_area_entry(split[2])
 	else
 		--vaati splits
 		check_vaati(split[2])
