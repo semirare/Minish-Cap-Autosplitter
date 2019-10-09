@@ -88,7 +88,7 @@
 --FLAG,ROYALVALLEY,2D02,6
 ------------------------------
 --Cloud Tops - lol glitchless
---ENTERBOSS,CLOUDTOPS
+--ENTERBOSS,HOUSEOFWINDS
 --splits upon entering the screen with house of the winds after taking the big tornado
 ------------------------------
 --Enter PoW
@@ -157,7 +157,7 @@ VAATI,V3
 --splits on last hit
 ------------------------------
 --Enter Cloud Tops - Lol Hundo
---ENTERBOSS,CLOUDTOPSMIDDLE
+--ENTERBOSS,CLOUDTOPS
 ------------------------------
 --Tingle Trophy - Lol Hundo
 --FLAG,TINGLE,2B41,6
