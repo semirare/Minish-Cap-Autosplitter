@@ -59,6 +59,13 @@
 --Ocarina
 --FLAG,OCARINA,2B37,2
 ------------------------------
+--Kinstones - Lol Hundo 
+--DO NOT USE YET
+--if kinstone counts are good and area becomes hyrule town? maybe?
+------------------------------
+--Simon's HP - Lol Hundo
+--FLAG,SIMON,2C9C,7
+------------------------------
 --Flippers - lol glitchless
 --FLAG,FLIPPERS,2B43,4
 ------------------------------
@@ -77,7 +84,7 @@
 --Water Element
 --FLAG,WATERELEMENT,2B42,4
 ------------------------------
---Royal Valley - lol glitchless
+--Royal Valley GLITCHLESS - lol glitchless
 --FLAG,ROYALVALLEY,2D02,6
 ------------------------------
 --Cloud Tops - lol glitchless
@@ -96,6 +103,28 @@
 ------------------------------
 --Wind Element
 --FLAG,WINDELEMENT,2B42,2
+------------------------------
+--Cuccos - Lol Hundo
+--FLAG,CUCCOS,2CA5,1
+------------------------------
+--Royal Valley HUNDO - Lol Hundo
+--FLAG,ROYALVALLEY,2D02,6
+------------------------------
+--Hyrule Garden - Lol Hundo
+--ENTERBOSS,WARPCRENEL
+------------------------------
+--Enter Wind Ruins - Lol Hundo
+--ENTERBOSS,WINDRUINS
+--Splits after getting HP from Castor bottom right minish cave then entering wind ruins
+------------------------------
+--Warp Crenel - Lol Hundo
+--ENTERBOSS,WARPCRENEL
+------------------------------
+--Warp Hylia - Lol Hundo
+--ENTERBOSS,WARPHYLIA
+------------------------------
+--4 Bottles - Lol Hundo
+--FLAG,BOTTLES,2B39,2
 ------------------------------
 --Start DHC
 --FLAG,ENTERDHC,2AA3,3
@@ -126,3 +155,16 @@
 --V3
 VAATI,V3
 --splits on last hit
+------------------------------
+--Enter Cloud Tops - Lol Hundo
+--ENTERBOSS,CLOUDTOPSMIDDLE
+------------------------------
+--Tingle Trophy - Lol Hundo
+--FLAG,TINGLE,2B41,6
+------------------------------
+--Figurines - Lol Hundo
+--FLAG,FIGURINES,2B41,4
+--Splits on getting the Carlov medal
+------------------------------
+--Mirror Shield - Lol Hundo
+--FLAG,MIRROR,2B35,4
