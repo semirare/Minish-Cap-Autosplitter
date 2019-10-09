@@ -159,6 +159,10 @@ VAATI,V3
 --Enter Cloud Tops - Lol Hundo
 --ENTERAREA,CLOUDTOPS
 ------------------------------
+--Leave Cloud Tops - Lol Hundo
+--ENTERAREA,LEAVECLOUDTOPS,2B34,4
+--Splits upon teleporting to Link's house AND having light arrows
+------------------------------
 --Tingle Trophy - Lol Hundo
 --FLAG,TINGLE,2B41,6
 ------------------------------
