@@ -23,14 +23,17 @@ local address_table =
 ["ENTERFOW"] = 0x002AA3,
 ["MOLEMITTS"] = 0x002B36,
 ["OCARINA"] = 0x002B37,
+["FLIPPERS"] = 0x002B43,
 ["BOOMERANG"] = 0x002B35,
 ["ENTERTOD"] = 0x002AA3,
 ["LANTERN"] = 0x002B35,
 ["WATERELEMENT"] = 0x002B42,
+["ROYALVALLEY"] = 0x002D02,
 ["ENTERPOW"] = 0x002AA3,
 ["CAPE"] = 0x002B37,
 ["WINDELEMENT"] = 0x002B42,
 ["ENTERDHC"] = 0x002AA3,
+["SPAWNNUTS"] = 0x002DC4,
 ["DHCKEY"] = 0x002DBC
 }
 
@@ -97,8 +100,12 @@ local function check_boss_entry(bossName)
 		compare_locations(current_location[1], current_location[2], 88, 22)
 	elseif (bossName == "OCTO") then
 		compare_locations(current_location[1], current_location[2], 96, 14)
+	elseif (bossName == "CLOUDTOPS") then
+		compare_locations(current_location[1], current_location[2], 8, 0)
 	elseif (bossName == "GYORG") then
 		compare_locations(current_location[1], current_location[2], 113, 0)
+	elseif (bossName == "DHCBOSSHALL") then
+		compare_locations(current_location[1], current_location[2], 136, 23)
 	elseif (bossName == "DARKNUTS") then
 		--darknuts to V1
 		compare_locations(current_location[1], current_location[2], 137, 0)
