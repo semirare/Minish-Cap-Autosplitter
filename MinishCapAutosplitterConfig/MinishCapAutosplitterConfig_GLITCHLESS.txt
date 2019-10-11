@@ -1,0 +1,128 @@
+--For each split that you want to use, remove the --in front of the line BELOW the splits name
+--Do not make any other modifications
+--IE) to use an ezlo split, remove the "--" at the start of the line below "--Ezlo" (--FLAG,EZLO,2C9E,4)
+------------------------------
+--possible splits
+------------------------------
+--Ezlo
+--FLAG,EZLO,2C9E,4
+------------------------------
+--Enter DWS
+--FLAG,ENTERDWS,2AA3,8
+------------------------------
+--Gust Jar
+--FLAG,GUSTJAR,2B36,6
+------------------------------
+--Enter Big Chu
+--FLAG,ENTERCHU,2D45,7
+--split on unlocking boss door
+------------------------------
+--Earth Element
+--FLAG,EARTHELEMENT,2B42,8
+------------------------------
+--Crenel Plant
+--FLAG,CRENELPLANT,2CC5,4
+--splits on the vine having crenel water dumped on it
+------------------------------
+--Grip Ring
+--FLAG,GRIPRING,2B43,8
+------------------------------
+--Enter CoF
+--FLAG,ENTERCOF,2AA3,7
+------------------------------
+--Cane
+--FLAG,CANE,2B36,4
+------------------------------
+--Enter Gleerock
+--ENTERAREA,GLEEROK
+--split on entering gleerock's room
+------------------------------
+--Fire Element
+--FLAG,FIREELEMENT,2B42,6
+------------------------------
+--Boots
+--FLAG,BOOTS,2B37,6
+------------------------------
+--Bow
+--FLAG,BOW,2B34,6
+------------------------------
+--Enter FoW
+--FLAG,ENTERFOW,2AA3,6
+------------------------------
+--Mole Mitts
+--FLAG,MOLEMITTS,2B36,2
+------------------------------
+--Enter Mazaal
+--ENTERAREA,MAZAAL
+--split on entering mazaal's room
+------------------------------
+--Ocarina
+--FLAG,OCARINA,2B37,2
+------------------------------
+--Flippers - ***HUNDO/GLITCHLESS***
+--FLAG,FLIPPERS,2B43,4
+------------------------------
+--Magical Boomerang
+--FLAG,BOOMERANG,2B35,8
+------------------------------
+--Enter ToD
+--FLAG,ENTERTOD,2AA3,5
+------------------------------
+--Lantern
+--FLAG,LANTERN,2B35,2
+------------------------------
+--Enter Octo
+--ENTERAREA,OCTO
+------------------------------
+--Water Element
+--FLAG,WATERELEMENT,2B42,4
+------------------------------
+--Royal Valley - ***GLITCHLESS***
+--FLAG,ROYALVALLEY,2D02,6
+------------------------------
+--Cloud Tops - ***GLITCHLESS***
+--ENTERAREA,HOUSEOFWINDS
+--splits upon entering the screen with house of the winds after taking the big tornado
+------------------------------
+--Enter PoW
+--FLAG,ENTERPOW,2AA3,4
+------------------------------
+--Cape
+--FLAG,CAPE,2B37,8
+------------------------------
+--Enter Gyorg
+--ENTERAREA,GYORG
+--split on entering gyorg room
+------------------------------
+--Wind Element
+--FLAG,WINDELEMENT,2B42,2
+------------------------------
+--Start DHC
+--FLAG,ENTERDHC,2AA3,3
+--Splits at leaving santuary hall after freeing the gaurds
+------------------------------
+--Spawn Darknuts
+--FLAG,SPAWNNUTS,2DC4,2
+--Splits on killing the black darknut that causes all the others to spawn
+------------------------------
+--DHC big key
+--FLAG,DHCKEY,2DBC,5
+------------------------------
+--Enter DHC Boss Hall(Ball & Chain, Keatons, Nuts) - Firerod
+--ENTERAREA,DHCBOSSHALL
+------------------------------
+--Darknuts
+--ENTERAREA,DARKNUTS
+--Splits upon entering staircase after darknuts
+------------------------------
+--V1
+--ENTERAREA,V1
+--splits on teleport to V2 room
+------------------------------
+--V2
+--VAATI,V2
+--splits on last hit
+------------------------------
+--V3
+VAATI,V3
+--splits on last hit
