@@ -49,7 +49,8 @@ local address_table =
 ["BOTTLES"] = 0x002B29,
 ["TINGLE"] = 0x002B41,
 ["FIGURINES"] = 0x002B41,
-["MIRROR"] = 0x002B35
+["MIRROR"] = 0x002B35,
+["OCTOSUCKS"] = 0x002D97
 }
 
 local location_table =
