@@ -7,10 +7,11 @@ Setup:
 1.) In LiveSplit, add the LiveSplit Server component to your layout. The default port (16834) should be fine for most people, but if for some reason you need to use another port, you will have to edit the lua script.
 2.) Extract the MinishCapAutosplitter.zip to somewhere convenient.
 3.) From the extracted folder, copy the contents of the "luasocket" folder to the root folder of BizHawk (where EmuHawk.exe, DiscoHawk.exe, etc. are).
-4.) From the extracted folder, copy the "MinishCapAutosplitter.lua" file and "MinishCapAutosplitterConfig.txt" into the Lua folder of BizHawk.
-5.) Edit the "MinishCapAutosplitterConfig.txt" file to match the splits you are using.  Instructions are at the top of the file.
+4.) From the extracted folder, copy the "MinishCapAutosplitter.lua" file and "MinishCapAutosplitterConfig" folder into the "Lua" folder of BizHawk.
+5.) Edit the "MinishCapAutosplitterConfig_CATEGORY.txt" file for each category to match the splits you are using.  Instructions are at the top of the file.
 
 That's it for setup.  Now, any time you start doing run, you have to start the LiveSplit server. This only has to be once when LiveSplit is first opened. To do this, right click on LiveSplit, and select Control->Start Server.
+Make sure that the "Category = " line in the "MinishCapAutosplitter.lua" file is set to the category that you are running. More explaination is at the top of the script.
 
 On Bizhawk, load your Minish Cap ROM, then select Tools->Lua Console. In the console, select Scripts->Open Script... and choose the MinishCapAutosplitter.lua file. Any time you start a new run, reset your timer and do a core reboot on BizHawk.  This will reset the varibles in the script.
 
