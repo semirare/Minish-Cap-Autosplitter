@@ -68,6 +68,9 @@
 --Enter ToD
 --FLAG,ENTERTOD,2AA3,5
 ------------------------------
+--BIG OCTO sucks water element ---here you go kerbis
+--FLAG,OCTOSUCKS,2D97,5
+------------------------------
 --Lantern
 --FLAG,LANTERN,2B35,2
 ------------------------------
