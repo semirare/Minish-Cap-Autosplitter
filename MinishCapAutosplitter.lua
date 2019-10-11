@@ -5,7 +5,7 @@
 --CHANGE THE BELOW LINE BASED ON WHAT CATEGORY YOU ARE RUNNING
 --change to one of the following: "ANY", "FIREROD", "GLITCHLESS", "HUNDO"
 --make sure you have your "MinishCapAutosplitterConfig_(category name).txt" file setup for your splits
-category = "ANY"
+category = "HUNDO"
 
 current_split = 1
 done = false
@@ -64,7 +64,6 @@ local location_table =
 ["V1"] = {140,0},
 ["WARPCRENEL"] = {6,2},
 ["WARPHYLIA"] = {11,0},
-["WINDRUINS"] = {5,0},
 ["CLOUDTOPS"] = {8,1},
 ["LEAVECLOUDTOPS"] = {3,1}
 }
@@ -118,10 +117,10 @@ local function check_kinstone_split()
 	if (kinstoneCave) then
 		if (kinstoneField) then
 			--if both cave and field have been entered, split upon town entry
-			if (player_loc[1] = 2 and player_loc[2] = 0) then
+			if (player_loc[1] == 2 and player_loc[2] == 0) then
 				tcp_connection:send("split\r\n")
 				current_split = current_split + 1
-			else
+			end
 		else
 			--if cave has been entered but field hasn't check for field entry
 			if (player_loc[1] == 3 and player_loc[2] == 7) then
@@ -130,15 +129,16 @@ local function check_kinstone_split()
 		end
 	else
 		--check for cave entry
-		if (player_loc[1] == 50 and player_loc[2] == 18) then
+		if (player_loc[1] == 19 and player_loc[2] == 3) then
 			kinstoneCave = true;
 		end
 	end
-	
+end
 
 --checks flag for item/dungeon entry/other flagged event
 local function check_flag(address,bit)
 	--read address
+	memory.usememorydomain("EWRAM")
 	read_byte = memory.readbyte(address)
 	--convert to 8 bit binary
 	read_byte = toBits(read_byte, 8)
@@ -198,6 +198,8 @@ local function check_current_split()
 		check_flag(address_table[split[2]], tonumber(split[4]))
 	elseif (split[1] == "ENTERAREA") then
 		check_area_entry(split[2])
+	elseif (split[1] == "KINSTONES") then
+		check_kinstone_split()
 	else
 		--vaati splits
 		check_vaati(split[2])
@@ -218,7 +220,7 @@ end
 
 --set up for customized splits
 local function establish_splits()
-	local file = io.open("MinishCapAutosplitterConfig" .. category .. ".txt", 'r')
+	local file = io.open("MinishCapAutosplitterConfig\\MinishCapAutosplitterConfig_" .. category .. ".txt", 'r')
 	local splitNum = 1
 	local splitInfo = {}
 	for line in file:lines() do
@@ -231,7 +233,8 @@ local function establish_splits()
 			splitNum = splitNum + 1
 		end
 	end
-	print("Using splits:\n")
+	print("Using category: " .. category)
+	print("Using splits:")
 	for k, v in pairs(splits_table) do
 		print(k .. ": " .. v[2])
 	end
