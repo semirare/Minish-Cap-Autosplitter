@@ -9,6 +9,7 @@ Setup:
 3.) From the extracted folder, copy the contents of the "luasocket" folder to the root folder of BizHawk (where EmuHawk.exe, DiscoHawk.exe, etc. are).
 4.) From the extracted folder, copy the "MinishCapAutosplitter.lua" file and "MinishCapAutosplitterConfig" folder into the "Lua" folder of BizHawk.
 5.) Edit the "MinishCapAutosplitterConfig_CATEGORY.txt" file for each category to match the splits you are using.  Instructions are at the top of the file.
+6.) In Bizhawk, select Config->Customize->Advanced. Under Lua Core, select Lua+LuaInterface and press ok.
 
 That's it for setup.  Now, any time you start doing run, you have to start the LiveSplit server. This only has to be once when LiveSplit is first opened. To do this, right click on LiveSplit, and select Control->Start Server.
 Make sure that the "Category = " line in the "MinishCapAutosplitter.lua" file is set to the category that you are running. More explaination is at the top of the script.
