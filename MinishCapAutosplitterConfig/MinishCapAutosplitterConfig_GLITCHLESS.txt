@@ -1,131 +1,126 @@
---For each split that you want to use, remove the --in front of the line BELOW the splits name
---Do not make any other modifications
---IE) to use an ezlo split, remove the "--" at the start of the line below "--Ezlo" (--FLAG,EZLO,2C9E,4)
-------------------------------
---possible splits
+--For each split that you want to use, remove the --in front of the line BELOW the splits name(the line starting with FLAG/LOCATION/VAATI
+--Splits MUST be in the order that you intend to use them, IE) you cannot put the ezlo split below the enter dws split
+--
+------------FLAG SPLITS------------
+--Flag splits will split when the flag at the given address becomes true, addresses can be found at https://docs.google.com/spreadsheets/d/11Ve770jjf7Y1dgf0kqWKlCjBpaNyw0XBkp-ayxeXJvg/edit#gid=0
+--To add a custom flag split, find the memory address for the flag you intend to use and add a line in the appropriate place Format: FLAG,0x(flag address),(flag bit)
+--Flag bit is which bit of the binary is "1" for the flag you want, IE) ezlo is 00010000, so it's 4th bit, 10000000 would be 1st bit and so on
+-----------------------------------
+--
+------------LOCATION SPLITS--------
+--Location splits will split when Link's area and room ids match the given area and room ids, ids can be found at https://docs.google.com/spreadsheets/d/1FSWWUMHTdHmIKghCwsY_BEjOFSZWz3x_kX4co34qgvw/edit#gid=0
+--To add a custom location split, find the area and room id for the room you intend to use and add a line in the appropriate place   FORMAT: LOCATION,(area id),(room id)
+-----------------------------------
+--
+------------VAATI SPLITS-----------
+--Vaati 2/3 splits use custom logic to know when his health hits the threshold to end the fight, don't change these
+-----------------------------------
+--
 ------------------------------
 --Ezlo
---FLAG,EZLO,2C9E,4
+--FLAG,0x02C9E,4
 ------------------------------
 --Enter DWS
---FLAG,ENTERDWS,2AA3,8
+FLAG,0x2AA3,8
 ------------------------------
 --Gust Jar
---FLAG,GUSTJAR,2B36,6
+FLAG,0x2B36,6
 ------------------------------
---Enter Big Chu
---FLAG,ENTERCHU,2D45,7
---split on unlocking boss door
+--Enter Big Chu --split on unlocking boss door
+--FLAG,0x2D45,7
 ------------------------------
 --Earth Element
---FLAG,EARTHELEMENT,2B42,8
+FLAG,0x2B42,8
 ------------------------------
---Crenel Plant
---FLAG,CRENELPLANT,2CC5,4
---splits on the vine having crenel water dumped on it
+--Crenel Plant --splits on the vine having crenel water dumped on it
+--FLAG,0x2CC5,4
 ------------------------------
 --Grip Ring
---FLAG,GRIPRING,2B43,8
+FLAG,0x2B43,8
 ------------------------------
 --Enter CoF
---FLAG,ENTERCOF,2AA3,7
+FLAG,0x2AA3,7
 ------------------------------
 --Cane
---FLAG,CANE,2B36,4
+--FLAG,0x2B36,4
 ------------------------------
---Enter Gleerock
---ENTERAREA,GLEEROK
---split on entering gleerock's room
+--Enter Gleerock --splits on entering gleerock's room
+--LOCATION,81,0
 ------------------------------
 --Fire Element
---FLAG,FIREELEMENT,2B42,6
+FLAG,0x2B42,6
+------------------------------
+--PKGasm --splits on ending of vaati/king cutscene
+--FLAG,0x2CCF,5
 ------------------------------
 --Boots
---FLAG,BOOTS,2B37,6
+FLAG,0x2B37,6
 ------------------------------
 --Bow
---FLAG,BOW,2B34,6
+--FLAG,0x2B34,6
 ------------------------------
 --Enter FoW
---FLAG,ENTERFOW,2AA3,6
+FLAG,0x2AA3,6
 ------------------------------
 --Mole Mitts
---FLAG,MOLEMITTS,2B36,2
+--FLAG,0x2B36,2
 ------------------------------
---Enter Mazaal
---ENTERAREA,MAZAAL
---split on entering mazaal's room
+--Enter Mazaal --split on entering mazaal's room
+--LOCATION,88, 22
 ------------------------------
 --Ocarina
---FLAG,OCARINA,2B37,2
-------------------------------
---Flippers - ***HUNDO/GLITCHLESS***
---FLAG,FLIPPERS,2B43,4
+FLAG,0x2B37,2
 ------------------------------
 --Magical Boomerang
---FLAG,BOOMERANG,2B35,8
+FLAG,0x2B35,8
 ------------------------------
 --Enter ToD
---FLAG,ENTERTOD,2AA3,5
+--FLAG,0x2AA3,5
 ------------------------------
---BIG OCTO sucks water element ---here you go kerbis
---FLAG,OCTOSUCKS,2D97,5
+--East lever pushed in ToD
+--FLAG,0x2D8A,4
+------------------------------
+--BIG OCTO sucks water element
+--FLAG,0x2D97,5 
 ------------------------------
 --Lantern
---FLAG,LANTERN,2B35,2
+--FLAG,0x2B35,2
 ------------------------------
 --Enter Octo
---ENTERAREA,OCTO
+--LOCATION,96,14
 ------------------------------
 --Water Element
---FLAG,WATERELEMENT,2B42,4
-------------------------------
---Royal Valley - ***GLITCHLESS***
---FLAG,ROYALVALLEY,2D02,6
-------------------------------
---Cloud Tops - ***GLITCHLESS***
---ENTERAREA,HOUSEOFWINDS
---splits upon entering the screen with house of the winds after taking the big tornado
+FLAG,0x2B42,4
 ------------------------------
 --Enter PoW
---FLAG,ENTERPOW,2AA3,4
+--FLAG,0x2AA3,4
 ------------------------------
 --Cape
---FLAG,CAPE,2B37,8
+FLAG,0x2B37,8
 ------------------------------
---Enter Gyorg
---ENTERAREA,GYORG
---split on entering gyorg room
+--Enter Gyorg --splits on entering gyorg room
+--LOCATION,113,0
 ------------------------------
 --Wind Element
---FLAG,WINDELEMENT,2B42,2
+FLAG,0x2B42,2
 ------------------------------
---Start DHC
---FLAG,ENTERDHC,2AA3,3
---Splits at leaving santuary hall after freeing the gaurds
+--Start DHC --Splits at leaving santuary hall after freeing the gaurds
+--FLAG,0x2AA3,3
 ------------------------------
---Spawn Darknuts
---FLAG,SPAWNNUTS,2DC4,2
---Splits on killing the black darknut that causes all the others to spawn
+--Spawn Darknuts --Splits on killing the black darknut that causes all the others to spawn
+--FLAG,0x2DC4,2
 ------------------------------
 --DHC big key
---FLAG,DHCKEY,2DBC,5
+FLAG,0x2DBC,5
 ------------------------------
---Enter DHC Boss Hall(Ball & Chain, Keatons, Nuts) - Firerod
---ENTERAREA,DHCBOSSHALL
+--Darknuts --Splits upon entering staircase to vaati cutscene after darknuts
+LOCATION,137,0
 ------------------------------
---Darknuts
---ENTERAREA,DARKNUTS
---Splits upon entering staircase after darknuts
+--V1 --splits on teleport to V2 room after killing V1
+LOCATION,140,0
 ------------------------------
---V1
---ENTERAREA,V1
---splits on teleport to V2 room
+--V2 --splits on last hit
+VAATI,V2
 ------------------------------
---V2
---VAATI,V2
---splits on last hit
-------------------------------
---V3
+--V3 --splits on last hit
 VAATI,V3
---splits on last hit
