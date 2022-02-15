@@ -24,7 +24,7 @@
 FLAG,0x2AA3,8
 ------------------------------
 --Gust Jar
-FLAG,0x2B36,6
+--FLAG,0x2B36,6
 ------------------------------
 --Enter Big Chu --split on unlocking boss door
 --FLAG,0x2D45,7
@@ -53,6 +53,12 @@ FLAG,0x2B42,6
 --PKGasm --splits on ending of vaati/king cutscene
 --FLAG,0x2CCF,5
 ------------------------------
+--Sign
+--FLAG,0x2C9F,2
+------------------------------
+--Mushroom
+--FLAG,0x2B40,8
+------------------------------
 --Boots
 FLAG,0x2B37,6
 ------------------------------
@@ -66,16 +72,22 @@ FLAG,0x2AA3,6
 --FLAG,0x2B36,2
 ------------------------------
 --Enter Mazaal --split on entering mazaal's room
---LOCATION,88, 22
+--LOCATION,88,22
 ------------------------------
 --Ocarina
 FLAG,0x2B37,2
 ------------------------------
 --Magical Boomerang
-FLAG,0x2B35,8
+--FLAG,0x2B35,8
+------------------------------
+--Power Bracelets
+--FLAG,0x2B43,6
+------------------------------
+--Flippers -
+FLAG,0x2B43,4
 ------------------------------
 --Enter ToD
---FLAG,0x2AA3,5
+FLAG,0x2AA3,5
 ------------------------------
 --East lever pushed in ToD
 --FLAG,0x2D8A,4
@@ -92,11 +104,17 @@ FLAG,0x2B35,8
 --Water Element
 FLAG,0x2B42,4
 ------------------------------
+--Enter Graveyard
+--LOCATION,9,0
+------------------------------
+--Royal Valley Done
+FLAG,0x2D02,6
+------------------------------
 --Enter PoW
---FLAG,0x2AA3,4
+FLAG,0x2AA3,4
 ------------------------------
 --Cape
-FLAG,0x2B37,8
+--FLAG,0x2B37,8
 ------------------------------
 --Enter Gyorg --splits on entering gyorg room
 --LOCATION,113,0
@@ -104,8 +122,8 @@ FLAG,0x2B37,8
 --Wind Element
 FLAG,0x2B42,2
 ------------------------------
---Start DHC --Splits at leaving santuary hall after freeing the gaurds
---FLAG,0x2AA3,3
+--Start DHC --Splits at leaving santuary hall after freeing the guards
+FLAG,0x2AA3,3
 ------------------------------
 --Spawn Darknuts --Splits on killing the black darknut that causes all the others to spawn
 --FLAG,0x2DC4,2
@@ -114,13 +132,13 @@ FLAG,0x2B42,2
 FLAG,0x2DBC,5
 ------------------------------
 --Darknuts --Splits upon entering staircase to vaati cutscene after darknuts
-LOCATION,137,0
+--LOCATION,137,0
 ------------------------------
 --V1 --splits on teleport to V2 room after killing V1
-LOCATION,140,0
+--LOCATION,140,0
 ------------------------------
 --V2 --splits on last hit
-VAATI,V2
+--VAATI,V2
 ------------------------------
 --V3 --splits on last hit
 VAATI,V3
